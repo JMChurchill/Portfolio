@@ -1,0 +1,248 @@
+:root {
+  --primary-color: #26eeb0;
+  --background-color: #fff;
+  --btn-text-color: #fff;
+  --border-radius: 5px;
+  --box-shadow-offset-x: 0;
+  --box-shadow-offset-y: 0.125rem;
+  --box-shadow-blur: 0.5rem;
+  --box-shadow-spread: -0.25rem;
+  --box-shadow-color: black;
+  font-size: 18;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: Roboto, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--btn-text-color);
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+body header {
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 0.5rem 5rem;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+body header .logo {
+  margin: auto 0;
+  font-size: 1.2rem;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+body header nav ul a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+body header nav ul a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+body main h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+body main > article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 10%;
+  padding-top: 5rem;
+  border: 1px solid green;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+}
+
+body main #welcome-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #welcome-container h1 {
+  color: black;
+}
+
+body main #welcome-container span {
+  color: var(--primary-color);
+}
+
+body main #about-container > div {
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+body main #skills-container .skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main #skills-container .skills .skill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+body main #skills-container .skills .skill-container .icon {
+  width: 100%;
+  aspect-ratio: 1;
+  background-size: 100%;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+}
+
+body main #contact-container > .btns {
+  min-height: 60%;
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
+}
+
+body main #contact-container > .btns .icon-btn {
+  -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+  aspect-ratio: 1;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+body main #contact-container > .btns .icon-btn > div {
+  width: 60%;
+  height: 60%;
+}
+
+body main #contact-container > .btns .icon-btn svg {
+  fill: var(--btn-text-color);
+}
+
+body main #contact-container > .btns .icon-btn:hover {
+  background-color: white;
+}
+
+body main #contact-container > .btns .icon-btn:hover svg {
+  fill: var(--primary-color);
+}
+/*# sourceMappingURL=style.css.map */

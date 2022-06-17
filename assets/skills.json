@@ -1,0 +1,15 @@
+[
+  { "name": "HTML", "image": "html-5.png", "type": "language" },
+  { "name": "CSS", "image": "css-3.png", "type": "language" },
+  { "name": "JaveScript", "image": "js.png", "type": "language" },
+  { "name": "SASS", "image": "sass.png", "type": "language" },
+  { "name": "C#", "image": "c-sharp.png", "type": "language" },
+  { "name": "MySQL", "image": "mysql.png", "type": "language" },
+  { "name": "MSSQL", "image": "sql-server.png", "type": "language" },
+  { "name": "Docker", "image": "Moby-logo.webp", "type": "language" },
+  { "name": "React.js", "image": "react.png", "type": "framework" },
+  { "name": "React Native", "image": "react.png", "type": "framework" },
+  { "name": "Node.js", "image": "node-js.png", "type": "framework" },
+  { "name": "Express.js", "image": "express.png", "type": "framework" },
+  { "name": "Xamarin", "image": "xamarin.png", "type": "framework" }
+]
