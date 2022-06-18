@@ -28,7 +28,8 @@ body {
 button {
   background-color: var(--primary-color);
   border: none;
-  padding: 1rem;
+  padding: 0.75rem;
+  margin: 0.5rem;
   font-size: 1rem;
   color: var(--btn-text-color);
   border-radius: var(--border-radius);
@@ -45,6 +46,7 @@ button:hover {
 }
 
 body header {
+  z-index: 999;
   position: fixed;
   width: 100%;
   height: 5rem;
@@ -190,6 +192,174 @@ body main #skills-container .skills .skill-container .icon {
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
+}
+
+body main #projects-container .projects {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+body main #projects-container .projects .project-container {
+  width: 100%;
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+body main #projects-container .projects .project-container .image-overlay {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+body main #projects-container .projects .project-container .image-overlay > p {
+  margin: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  color: white;
+  border-radius: var(--border-radius);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main #projects-container .projects .project-container .image-overlay .arrow {
+  margin: 0;
+  position: absolute;
+  margin: 0 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem;
+  color: white;
+  border-radius: var(--border-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #projects-container .projects .project-container .image-overlay .arrow svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+body main #projects-container .projects .project-container .image-overlay #left-arrow {
+  left: 0;
+}
+
+body main #projects-container .projects .project-container .image-overlay #right-arrow {
+  right: 0;
+}
+
+body main #projects-container .projects .project-container .image-conatiner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 5px 5px 30px;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+body main #projects-container .projects .project-container .image-conatiner::-webkit-scrollbar {
+  display: none;
+}
+
+body main #projects-container .projects .project-container .image-conatiner .image {
+  background-size: 100%;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+body main #projects-container .projects .project-container .name {
+  color: var(--primary-color);
+}
+
+body main #projects-container .projects .project-container .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main #projects-container .projects .project-container .btn-container .icon-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+body main #projects-container .projects .project-container .btn-container .icon-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--btn-text-color);
+}
+
+body main #projects-container .projects .project-container .btn-container .icon-btn svg g g {
+  fill: var(--btn-text-color);
+}
+
+body main #projects-container .projects .project-container .btn-container .icon-btn:hover svg {
+  fill: var(--primary-color);
+}
+
+body main #projects-container .projects .project-container .btn-container .icon-btn:hover svg g g {
+  fill: var(--primary-color);
+}
+
+body main #projects-container .projects .project-container:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body main #projects-container .projects .project-container:hover .image-conatiner p {
+  display: block;
 }
 
 body main #contact-container > .btns {

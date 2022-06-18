@@ -27,7 +27,8 @@ body {
 button {
   background-color: var(--primary-color);
   border: none;
-  padding: 1rem;
+  padding: 0.75rem;
+  margin: 0.5rem;
   font-size: 1rem;
   color: var(--btn-text-color);
   border-radius: var(--border-radius);
@@ -43,6 +44,7 @@ button {
 
 body {
   header {
+    z-index: 999;
     position: fixed;
     width: 100%;
     height: 5rem;
@@ -147,6 +149,152 @@ body {
             background-size: 100%;
             background-position: center; /* Center the image */
             background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+    #projects-container {
+      .projects {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        // display: flex;
+        // gap: 1rem;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        .project-container {
+          .image-overlay {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+
+            // border: 1px solid purple;
+            // background-color: blue;
+            > p {
+              margin: 0;
+              position: absolute;
+              background-color: rgba(0, 0, 0, 0.2);
+              padding: 1rem;
+              color: white;
+              border-radius: var(--border-radius);
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            .arrow {
+              margin: 0;
+              position: absolute;
+              margin: 0 1rem;
+              top: 50%;
+              transform: translateY(-50%);
+              // width: 1rem;
+              // height: 1rem;
+              background-color: rgba(0, 0, 0, 0.2);
+              padding: 0.25rem;
+              color: white;
+              border-radius: var(--border-radius);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                fill: white;
+              }
+            }
+            #left-arrow {
+              left: 0;
+            }
+            #right-arrow {
+              right: 0;
+            }
+          }
+          // width: 400px;
+          width: 100%;
+          background-color: var(--background-color);
+          padding: 1rem;
+          border-radius: var(--border-radius);
+          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+            var(--box-shadow-blur) var(--box-shadow-spread)
+            var(--box-shadow-color);
+          transition: all 250ms;
+          cursor: pointer;
+          .image-conatiner {
+            position: relative;
+            display: flex;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            // align-items: center;
+            // justify-content: center;
+            // background-size: 100%;
+            // background-position: center; /* Center the image */
+            // background-repeat: no-repeat;
+
+            // height: 50%;
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 5px 5px 30px;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            // scroll-padding: 0 24px;
+
+            .image {
+              background-size: 100%;
+              background-position: center; /* Center the image */
+              background-repeat: no-repeat;
+
+              width: 100%;
+              height: 100%;
+              flex-shrink: 0;
+              scroll-snap-align: start;
+            }
+          }
+          .name {
+            color: var(--primary-color);
+          }
+          .btn-container {
+            display: flex;
+            flex-direction: row;
+            .icon-btn {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              gap: 0.5rem;
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                fill: var(--btn-text-color);
+                g {
+                  g {
+                    fill: var(--btn-text-color);
+                  }
+                }
+              }
+              &:hover {
+                svg {
+                  fill: var(--primary-color);
+                  g {
+                    g {
+                      fill: var(--primary-color);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            transform: scale(1.1);
+            .image-conatiner {
+              p {
+                display: block;
+              }
+            }
           }
         }
       }

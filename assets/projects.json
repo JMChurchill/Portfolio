@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Project name 1",
+    "description": "this is the description",
+    "images": ["p1_1.webp", "p1_2.webp", "p1_3.webp"]
+  },
+  {
+    "title": "Project name 2",
+    "description": "this is the description this is the description this is the description this is the description ",
+    "images": ["p2_1.webp", "p2_2.webp"]
+  }
+]
