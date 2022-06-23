@@ -371,6 +371,17 @@ body {
       }
     }
   }
+  footer {
+    background-color: rgb(243, 243, 243);
+    padding: 1rem 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    > div {
+      > p {
+        margin: 0.25rem;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 600px) {
   body {
@@ -433,12 +444,16 @@ body {
         align-items: flex-start;
         width: 60%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgb(255, 255, 255);
         transform: translateX(0%);
+        box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+          var(--box-shadow-blur) var(--box-shadow-spread)
+          var(--box-shadow-color);
 
         ul {
           flex-direction: column;
           justify-content: center;
+          align-items: flex-start;
           // display: none;
           padding: 0;
           margin: 1rem 0 0 0;
@@ -465,6 +480,9 @@ body {
           ) !important;
         }
       }
+    }
+    footer {
+      grid-template-columns: 1fr;
     }
   }
 }
