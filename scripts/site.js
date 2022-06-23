@@ -1,3 +1,16 @@
+const primaryNav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".mobile-nav-toggle");
+
+navToggle.addEventListener("click", () => {
+  let visability = primaryNav.getAttribute("data-visible");
+  if (visability == "true") {
+    primaryNav.setAttribute("data-visible", false);
+    primaryNav.setAttribute("aria-hidden", false);
+  } else {
+    primaryNav.setAttribute("data-visible", true);
+    primaryNav.setAttribute("aria-hidden", true);
+  }
+});
 const contactClicked = () => {
   var contactContainer = document.getElementById("contact-container");
   contactContainer.scrollIntoView();
@@ -11,7 +24,6 @@ const generateSkills = async () => {
   var langsContainer = document.getElementById("langs");
   var framesContainer = document.getElementById("frams");
   skills.forEach((skill) => {
-    console.log(skill.name);
     let newSkill = document.createElement("div");
     newSkill.className = "skill-container";
     let image = document.createElement("div");
@@ -34,8 +46,6 @@ const generateProjects = async () => {
   );
   var projectsContainer = document.getElementById("projects");
   projects.forEach((project, j) => {
-    console.log(project.title);
-    console.log(j);
     let newProject = document.createElement("div");
     newProject.className = "project-container";
     let overlayImage = document.createElement("div");
@@ -76,7 +86,6 @@ const generateProjects = async () => {
       // const index = Array.from(dots.children).indexOf(target);
       const selector = `.image${j}:nth-child(${currentImage})`;
       const box = document.querySelector(selector);
-      console.log(selector);
       box.scrollIntoView({
         behavior: "smooth",
         inline: "start",
@@ -129,7 +138,6 @@ const generateProjects = async () => {
       '<svg width="64px" height="64px" viewBox="0 0 64 64" id="i-github" xmlns="http://www.w3.org/2000/svg" > <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" /> </svg>';
     codeBtn.innerHTML += "Code";
     buttons.appendChild(codeBtn);
-    console.log(projectsContainer);
     projectsContainer.appendChild(newProject);
   });
 };
