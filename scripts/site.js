@@ -11,9 +11,13 @@ navToggle.addEventListener("click", () => {
     primaryNav.setAttribute("aria-hidden", true);
   }
 });
+
 const contactClicked = () => {
   var contactContainer = document.getElementById("contact-container");
   contactContainer.scrollIntoView();
+};
+const CVClicked = () => {
+  alert("Download CV");
 };
 
 // generate skills
