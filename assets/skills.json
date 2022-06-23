@@ -11,5 +11,7 @@
   { "name": "React Native", "image": "react.png", "type": "framework" },
   { "name": "Node.js", "image": "node-js.png", "type": "framework" },
   { "name": "Express.js", "image": "express.png", "type": "framework" },
-  { "name": "Xamarin", "image": "xamarin.png", "type": "framework" }
+  { "name": "Xamarin", "image": "xamarin.png", "type": "framework" },
+  { "name": "JUnit", "image": "JUnit.png", "type": "framework" },
+  { "name": "Cypress", "image": "cypress.png", "type": "framework" }
 ]
