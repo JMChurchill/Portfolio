@@ -590,7 +590,7 @@ body footer > div > p {
             align-items: flex-start;
     width: 60%;
     height: 100vh;
-    background-color: white;
+    background-color: var(--background-color);
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
     -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
