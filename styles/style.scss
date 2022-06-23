@@ -14,6 +14,7 @@
   font-size: 18;
 }
 html {
+  width: 100vw;
   scroll-behavior: smooth;
 }
 body {
@@ -43,15 +44,20 @@ button {
 }
 
 body {
+  position: relative;
+  width: 100%;
   header {
     z-index: 999;
     position: fixed;
-    width: 100%;
+    // width: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid red;
     height: 5rem;
     background-color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0.5rem 5rem;
+    grid-template-columns: 25% 75%;
+    padding: 0.5rem CLAMP(2rem, 5%, 5rem);
     color: var(--primary-color);
     font-size: 1.2rem;
     .logo {
@@ -60,31 +66,47 @@ body {
     }
     nav {
       display: flex;
+      flex-wrap: wrap;
+      // display: grid;
+      // grid-template-columns: repeat(auto-fill);
       align-items: center;
       justify-content: end;
-      width: 100%;
+      // width: 100%;
       ul {
         display: flex;
+        flex-wrap: wrap;
+
         align-items: center;
         justify-content: end;
-
-        gap: 2rem;
+        padding: 0;
+        // gap: MIN(1rem, 10%);
         list-style-type: none;
         a {
           color: var(--primary-color);
           text-decoration: none;
           margin: 0;
           padding: 0.5rem;
+          svg {
+            width: 1rem;
+            height: 1rem;
+            margin: auto 0.5rem auto auto;
+            fill: var(--primary-color);
+            // margin-right: 0.25rem;
+          }
           &:hover {
             background-color: var(--primary-color);
             color: white;
             border-radius: var(--border-radius);
+            svg {
+              fill: white;
+            }
           }
         }
       }
     }
   }
   main {
+    width: 100%;
     h1 {
       color: var(--primary-color);
       font-size: 2rem;
@@ -335,6 +357,45 @@ body {
               fill: var(--primary-color);
             }
           }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+    width: 100%;
+    position: relative;
+    header {
+      // width: 100%;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: auto;
+      min-height: 5rem;
+      padding-top: 1rem;
+      font-size: 1.5rem;
+      .logo {
+        font-size: 1.5rem;
+        // align-content: center;
+        // width: auto;
+      }
+      nav {
+        justify-content: center;
+        align-items: center;
+        ul {
+          flex-direction: column;
+          justify-content: center;
+          // display: none;
+          padding: 0;
+          margin: 1rem 0 0 0;
+          gap: 1rem;
+        }
+        &[aria-hidden="true"] {
+          display: none;
+          // background-color: #26eeb0;
         }
       }
     }
