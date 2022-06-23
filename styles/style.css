@@ -546,7 +546,7 @@ body main #contact-container > .btns .icon-btn:hover svg {
             transform: translateX(100%);
   }
   body main > article {
-    padding: 2rem MAX(1rem, 2%) !important;
+    padding: 4rem MAX(1rem, 2%) !important;
   }
   body main #skills-container .skills {
     -ms-grid-columns: (MINMAX(100px, 1fr))[auto-fit] !important;
