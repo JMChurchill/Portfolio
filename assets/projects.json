@@ -2,12 +2,14 @@
   {
     "title": "Project name 1",
     "description": "this is the description",
-    "images": ["p1_1.webp", "p1_2.webp", "p1_3.webp"]
+    "images": ["p1_1.webp", "p1_2.webp", "p1_3.webp"],
+    "tags": []
   },
   {
     "title": "Project name 2",
     "description": "this is the description this is the description this is the description this is the description ",
-    "images": ["p2_1.webp", "p2_2.webp"]
+    "images": ["p2_1.webp", "p2_2.webp"],
+    "tags": []
   },
   {
     "title": "PersaLearn - Educational Mobile and Web Application",
@@ -17,11 +19,19 @@
       "persalearn_2.png",
       "persalearn_3.jpg",
       "persalearn_4.png"
-    ]
+    ],
+    "tags": ["React JS", "React Native", "Node JS", "CSS"]
   },
   {
     "title": "Full Stack Shopping Application",
     "description": "To provide a more efficient and personalised online marketplace environment for buyers and sellers through more specialised and relevant product recommendations, saving consumers time by anticipating their needs while streamlining the product discovery process and therefore increasing sales.",
-    "images": ["shop_1.png", "shop_2.png", "shop_3.png"]
+    "images": ["shop_1.png", "shop_2.png", "shop_3.png"],
+    "tags": ["Xamarin", "ASP.NET", "API"]
+  },
+  {
+    "title": "Full Stack Shopping Application",
+    "description": "To provide a more efficient and personalised online marketplace environment for buyers and sellers through more specialised and relevant product recommendations, saving consumers time by anticipating their needs while streamlining the product discovery process and therefore increasing sales.",
+    "images": ["shop_1.png", "shop_2.png", "shop_3.png"],
+    "tags": ["Xamarin", "ASP.NET", "API"]
   }
 ]

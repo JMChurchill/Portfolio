@@ -391,6 +391,40 @@ body main #projects-container .projects .project-container .image-conatiner .ima
   scroll-snap-align: start;
 }
 
+body main #projects-container .projects .project-container .tag_container {
+  background-color: var(--item-container);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+body main #projects-container .projects .project-container .tag_container .tag {
+  background-color: var(--background-color);
+  min-width: 4rem;
+  text-align: center;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
 body main #projects-container .projects .project-container .name {
   color: var(--primary-color);
 }

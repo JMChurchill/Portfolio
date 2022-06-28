@@ -116,6 +116,18 @@ const generateProjects = async () => {
     overlayImage.appendChild(leftArrow);
     overlayImage.appendChild(rightArrow);
 
+    let tags = document.createElement("div");
+    tags.className = "tag_container";
+
+    project.tags.forEach((t) => {
+      let tag = document.createElement("p");
+      tag.className = "tag";
+      tag.innerText = t;
+      tags.appendChild(tag);
+    });
+
+    newProject.appendChild(tags);
+
     let title = document.createElement("h3");
     title.className = "name";
     title.innerText = project.title;

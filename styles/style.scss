@@ -324,6 +324,34 @@ body {
               scroll-snap-align: start;
             }
           }
+          .tag_container {
+            background-color: var(--item-container);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: inset var(--box-shadow-offset-x)
+              var(--box-shadow-offset-y) var(--box-shadow-blur)
+              var(--box-shadow-spread) var(--box-shadow-color);
+
+            .tag {
+              background-color: var(--background-color);
+              min-width: 4rem;
+              text-align: center;
+              // margin: 0.5rem;
+              margin: 0;
+              padding: 0.25rem 0.5rem;
+              border-radius: var(--border-radius);
+              box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+                var(--box-shadow-blur) var(--box-shadow-spread)
+                var(--box-shadow-color);
+            }
+          }
           .name {
             color: var(--primary-color);
           }
