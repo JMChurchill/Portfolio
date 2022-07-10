@@ -513,6 +513,26 @@ body {
     }
   }
 }
+@media only screen and (max-width: 750px) {
+  body {
+    main {
+      #welcome-container {
+        h1 {
+          display: block;
+          .title {
+            display: inline;
+            white-space: normal; /* Keeps the content on a single line */
+            width: 100%;
+            overflow: hidden;
+            letter-spacing: 0.05em; /* Adjust as needed */
+
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
   body {
     width: 100%;
