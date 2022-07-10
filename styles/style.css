@@ -5,6 +5,7 @@
   --btn-text-color: #fff;
   --item-container: #fff;
   --border-radius: 5px;
+  --tag-background: rgba(0, 0, 0, 0.1);
   --box-shadow-offset-x: 0;
   --box-shadow-offset-y: 0.125rem;
   --box-shadow-blur: 0.5rem;
@@ -55,6 +56,7 @@
     --background-color: #031118;
     --text-color: white;
     --item-container: rgba(255, 255, 255, 0.1);
+    --tag-background: rgba(255, 255, 255, 0.1);
     --btn-text-color: #031118;
   }
   body #skills-container .skills {
@@ -66,7 +68,7 @@
             box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
   }
   body footer {
-    background-color: rgba(255, 255, 255, 0.479) !important;
+    background-color: black !important;
   }
 }
 
@@ -469,19 +471,15 @@ body main #projects-container .projects .project-container .tag_container {
   margin-top: 0.75rem;
   overflow: hidden;
   border-radius: var(--border-radius);
-  -webkit-box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
-          box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
 }
 
 body main #projects-container .projects .project-container .tag_container .tag {
-  background-color: var(--item-container);
+  background-color: var(--tag-background);
   min-width: 4rem;
   text-align: center;
   margin: 0;
   padding: 0.25rem 0.5rem;
   border-radius: var(--border-radius);
-  -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
-          box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
 }
 
 body main #projects-container .projects .project-container .name {
@@ -551,6 +549,10 @@ body main #contact-container > .btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -560,6 +562,22 @@ body main #contact-container > .btns {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5rem;
+}
+
+body main #contact-container > .btns .contact {
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 80%;
+      grid-template-columns: 10% 80%;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #contact-container > .btns .contact p {
+  font-size: 1.2rem;
 }
 
 body main #contact-container > .btns .icon-btn {
@@ -574,7 +592,6 @@ body main #contact-container > .btns .icon-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: CLAMP(10rem, 20%, 15rem);
   aspect-ratio: 1;
   background-color: var(--primary-color);
   border-radius: var(--border-radius);
@@ -603,16 +620,28 @@ body main #contact-container > .btns .icon-btn:hover svg {
 }
 
 body footer {
-  background-color: lightgray;
+  background-color: #f1f1f1;
   padding: 1rem 10%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
 }
 
 body footer > div > p {
   margin: 0.25rem;
+}
+
+body footer > div a {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -714,6 +743,9 @@ body footer > div > p {
   body main #skills-container .skills {
     -ms-grid-columns: (MINMAX(100px, 1fr))[auto-fit] !important;
         grid-template-columns: repeat(auto-fit, MINMAX(100px, 1fr)) !important;
+  }
+  body main #contact-container .btns .contact {
+    width: 100%;
   }
   body footer {
     -ms-grid-columns: 1fr;
