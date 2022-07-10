@@ -1,17 +1,5 @@
 [
   {
-    "title": "Project name 1",
-    "description": "this is the description",
-    "images": ["p1_1.webp", "p1_2.webp", "p1_3.webp"],
-    "tags": []
-  },
-  {
-    "title": "Project name 2",
-    "description": "this is the description this is the description this is the description this is the description ",
-    "images": ["p2_1.webp", "p2_2.webp"],
-    "tags": []
-  },
-  {
     "title": "PersaLearn - Educational Mobile and Web Application",
     "description": "PersaLearn is a digital learning platform that incorporate game-design elements and principals. The goal of the platform is to create a more enjoyable learning experience that will make studying less of a chore.",
     "images": [
@@ -20,18 +8,84 @@
       "persalearn_3.jpg",
       "persalearn_4.png"
     ],
-    "tags": ["React JS", "React Native", "Node JS", "CSS"]
+    "tags": ["React JS", "React Native", "Node JS", "CSS"],
+    "links": [
+      { "name": "live", "url": "http://178.62.104.116:3000/" },
+      { "name": "code", "url": "https://github.com/JMChurchill/COMP3000" }
+    ]
   },
   {
     "title": "Full Stack Shopping Application",
     "description": "To provide a more efficient and personalised online marketplace environment for buyers and sellers through more specialised and relevant product recommendations, saving consumers time by anticipating their needs while streamlining the product discovery process and therefore increasing sales.",
     "images": ["shop_1.png", "shop_2.png", "shop_3.png"],
-    "tags": ["Xamarin", "ASP.NET", "API"]
+    "tags": ["Xamarin", "ASP.NET", "API"],
+    "links": [{ "name": "code", "url": "https://github.com" }]
   },
   {
-    "title": "Full Stack Shopping Application",
-    "description": "To provide a more efficient and personalised online marketplace environment for buyers and sellers through more specialised and relevant product recommendations, saving consumers time by anticipating their needs while streamlining the product discovery process and therefore increasing sales.",
-    "images": ["shop_1.png", "shop_2.png", "shop_3.png"],
-    "tags": ["Xamarin", "ASP.NET", "API"]
+    "title": "React Theme Switcher",
+    "description": "Allowing user to select colors and font size of the website. This is achieved through the use of css variables and selected data is stored in local memory so changes persist on different sessions.",
+    "images": [
+      "themeSwitch1.png",
+      "themeSwitch2.png",
+      "themeSwitch3.png",
+      "themeSwitch4.png",
+      "themeSwitch5.png"
+    ],
+    "tags": ["React JS", "CSS"],
+    "links": [
+      { "name": "live", "url": "https://venerable-khapse-40e2dd.netlify.app/" },
+      {
+        "name": "code",
+        "url": "https://github.com/JMChurchill/React-Theme-Switcher"
+      }
+    ]
+  },
+  {
+    "title": "Snake.JS",
+    "description": "Snake Game made with JavaScript",
+    "images": ["snake1.png"],
+    "tags": ["Javascript", "HTML Canvas"],
+    "links": [
+      {
+        "name": "live",
+        "url": "https://cheery-mousse-db7d4c.netlify.app/"
+      },
+      {
+        "name": "code",
+        "url": "https://github.com/JMChurchill/Snake"
+      }
+    ]
+  },
+  {
+    "title": "Type Speed Test",
+    "description": "A typing speed test with random sentence generation, level progression and scoreboard",
+    "images": [
+      "typeSpeedTest1.png",
+      "typeSpeedTest0.png",
+      "typeSpeedTest2.png",
+      "typeSpeedTest3.png",
+      "typeSpeedTest4.png",
+      "typeSpeedTest5.png",
+      "typeSpeedTest6.png"
+    ],
+    "tags": ["Javascript", "SCSS"],
+    "links": [
+      {
+        "name": "code",
+        "url": "https://github.com/JMChurchill/Type-Speed-Test"
+      }
+    ]
+  },
+  {
+    "title": "Self Checkout and Stock Management System",
+    "description": "Software engineering, design patterns, coursework submittion",
+    "images": [],
+    "tags": ["Java", "Unit Testing", "Design Patterns"],
+    "links": [
+      {
+        "name": "code",
+        "url": "https://github.com/JMChurchill/Self-Checkout-and-Stock-managment-Application---COMP2000"
+      }
+    ]
   }
 ]

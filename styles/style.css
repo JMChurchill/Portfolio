@@ -13,6 +13,42 @@
   font-size: 18;
 }
 
+@-webkit-keyframes blinking {
+  from {
+    color: var(--primary-color);
+  }
+  to {
+    color: var(--background-color);
+  }
+}
+
+@keyframes blinking {
+  from {
+    color: var(--primary-color);
+  }
+  to {
+    color: var(--background-color);
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 /* Light mode */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -214,10 +250,35 @@ body main #welcome-container {
 
 body main #welcome-container h1 {
   color: var(--text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-body main #welcome-container span {
+body main #welcome-container .title {
+  display: inline-block;
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  width: 100%;
+  overflow: hidden;
+  letter-spacing: 0.05em;
+  /* Adjust as needed */
+  -webkit-animation: typing 2s steps(50, end);
+          animation: typing 2s steps(50, end);
+}
+
+body main #welcome-container .cursor {
   color: var(--primary-color);
+  -webkit-animation-name: blinking;
+          animation-name: blinking;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 body main #about-container > div {
@@ -392,7 +453,6 @@ body main #projects-container .projects .project-container .image-conatiner .ima
 }
 
 body main #projects-container .projects .project-container .tag_container {
-  background-color: var(--item-container);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,8 +466,7 @@ body main #projects-container .projects .project-container .tag_container {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.5rem;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
+  margin-top: 0.75rem;
   overflow: hidden;
   border-radius: var(--border-radius);
   -webkit-box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
@@ -415,7 +474,7 @@ body main #projects-container .projects .project-container .tag_container {
 }
 
 body main #projects-container .projects .project-container .tag_container .tag {
-  background-color: var(--background-color);
+  background-color: var(--item-container);
   min-width: 4rem;
   text-align: center;
   margin: 0;

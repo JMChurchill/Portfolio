@@ -15,6 +15,24 @@
   // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-size: 18;
 }
+
+@keyframes blinking {
+  from {
+    color: var(--primary-color);
+  }
+  to {
+    color: var(--background-color);
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 /* Light mode */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -179,9 +197,30 @@ body {
       justify-content: center;
       h1 {
         color: var(--text-color);
+        display: flex;
+        flex-direction: row;
+        // width: 0;
+        // overflow: hidden;
       }
-      span {
+      .title {
+        // display: none;
+        display: inline-block;
+        white-space: nowrap; /* Keeps the content on a single line */
+        width: 100%;
+        // width: 0;
+        overflow: hidden;
+        // animation-name: typing;
+        // animation
+        // animation-duration: 5s steps(40, end);
+        letter-spacing: 0.05em; /* Adjust as needed */
+
+        animation: typing 2s steps(50, end);
+      }
+      .cursor {
         color: var(--primary-color);
+        animation-name: blinking;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
       }
     }
     #about-container {
@@ -325,14 +364,14 @@ body {
             }
           }
           .tag_container {
-            background-color: var(--item-container);
+            // background-color: var(--item-container);
             display: flex;
             align-items: center;
             flex-wrap: wrap;
             flex-direction: row;
             gap: 0.5rem;
-            padding: 0.5rem;
-            margin-top: 0.25rem;
+            // padding: 0.5rem;
+            margin-top: 0.75rem;
             overflow: hidden;
             border-radius: var(--border-radius);
             box-shadow: inset var(--box-shadow-offset-x)
@@ -340,7 +379,8 @@ body {
               var(--box-shadow-spread) var(--box-shadow-color);
 
             .tag {
-              background-color: var(--background-color);
+              background-color: var(--item-container);
+              // background-color: var(--background-color);
               min-width: 4rem;
               text-align: center;
               // margin: 0.5rem;
