@@ -479,14 +479,15 @@ body {
           a {
             color: white;
             font-size: 1.2rem;
+            width: fit-content;
             cursor: pointer;
             position: relative;
             .tool-tip {
               opacity: 0;
               position: absolute;
               top: -2.75rem;
-              right: 50%;
-              transform: translateX(calc(-50% + 2rem));
+              left: 50%;
+              transform: translateX(-50%);
               background-color: var(--item-container);
               padding: 0.25rem 1rem;
 
