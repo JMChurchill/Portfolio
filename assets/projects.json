@@ -10,16 +10,27 @@
     ],
     "tags": ["React JS", "React Native", "Node JS", "CSS"],
     "links": [
-      { "name": "live", "url": "http://178.62.104.116:3000/" },
-      { "name": "code", "url": "https://github.com/JMChurchill/COMP3000" }
+      {
+        "name": "live",
+        "url": "http://178.62.104.116:3000/"
+      },
+      {
+        "name": "code",
+        "url": "https://github.com/JMChurchill/COMP3000"
+      }
     ]
   },
   {
     "title": "Full Stack Shopping Application",
     "description": "To provide a more efficient and personalised online marketplace environment for buyers and sellers through more specialised and relevant product recommendations, saving consumers time by anticipating their needs while streamlining the product discovery process and therefore increasing sales.",
     "images": ["shop_1.png", "shop_2.png", "shop_3.png"],
-    "tags": ["Xamarin", "ASP.NET", "API"],
-    "links": [{ "name": "code", "url": "https://github.com" }]
+    "tags": ["Xamarin", "ASP.NET", "API", "C#"],
+    "links": [
+      {
+        "name": "code",
+        "url": "https://github.com"
+      }
+    ]
   },
   {
     "title": "React Theme Switcher",
@@ -33,7 +44,10 @@
     ],
     "tags": ["React JS", "CSS"],
     "links": [
-      { "name": "live", "url": "https://venerable-khapse-40e2dd.netlify.app/" },
+      {
+        "name": "live",
+        "url": "https://venerable-khapse-40e2dd.netlify.app/"
+      },
       {
         "name": "code",
         "url": "https://github.com/JMChurchill/React-Theme-Switcher"
@@ -70,6 +84,10 @@
     ],
     "tags": ["Javascript", "SCSS"],
     "links": [
+      {
+        "name": "live",
+        "url": "https://timely-medovik-1a78d9.netlify.app/"
+      },
       {
         "name": "code",
         "url": "https://github.com/JMChurchill/Type-Speed-Test"
