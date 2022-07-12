@@ -6,12 +6,23 @@
   --item-container: #fff;
   --border-radius: 5px;
   --tag-background: rgba(0, 0, 0, 0.1);
+  --highlight-text-color: white;
   --box-shadow-offset-x: 0;
   --box-shadow-offset-y: 0.125rem;
   --box-shadow-blur: 0.5rem;
   --box-shadow-spread: -0.25rem;
   --box-shadow-color: black;
   font-size: 18;
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: var(--highlight-text-color);
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--highlight-text-color);
 }
 
 @-webkit-keyframes blinking {
@@ -58,6 +69,7 @@
     --item-container: rgba(255, 255, 255, 0.1);
     --tag-background: rgba(255, 255, 255, 0.1);
     --btn-text-color: #031118;
+    --highlight-text-color: #031118;
   }
   body #skills-container .skills {
     -webkit-box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
@@ -214,7 +226,7 @@ body header nav ul a:hover {
 }
 
 body header nav ul a:hover svg {
-  fill: white;
+  fill: var(--btn-text-color);
 }
 
 body main {
@@ -294,10 +306,11 @@ body main #about-container > div {
 body main #skills-container .skills {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (MINMAX(200px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, MINMAX(200px, 1fr));
+  -ms-grid-columns: (MINMAX(150px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, MINMAX(150px, 1fr));
   width: 100%;
   margin: 1rem 0;
+  padding: 0.25rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -320,7 +333,7 @@ body main #skills-container .skills .skill-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0.5rem;
+  margin: 0.25rem;
   padding: 1rem;
   border-radius: var(--border-radius);
   -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
@@ -334,6 +347,10 @@ body main #skills-container .skills .skill-container .icon {
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
+}
+
+body main #skills-container .skills .skill-container > p {
+  margin-bottom: 0;
 }
 
 body main #projects-container {
@@ -353,7 +370,6 @@ body main #projects-container .projects {
 }
 
 body main #projects-container .projects .project-container {
-  width: 40%;
   width: 100%;
   background-color: var(--background-color);
   padding: 1rem;
@@ -369,6 +385,16 @@ body main #projects-container .projects .project-container .image-overlay {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
+}
+
+body main #projects-container .projects .project-container .image-overlay .no-image-message {
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+body main #projects-container .projects .project-container .image-overlay .no-image-message span {
+  color: var(--primary-color);
 }
 
 body main #projects-container .projects .project-container .image-overlay > p {
@@ -576,8 +602,11 @@ body main #contact-container > .btns .contact {
           align-items: center;
 }
 
-body main #contact-container > .btns .contact p {
+body main #contact-container > .btns .contact p,
+body main #contact-container > .btns .contact a {
+  color: white;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 body main #contact-container > .btns .icon-btn {

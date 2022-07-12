@@ -58,6 +58,12 @@ const generateProjects = async () => {
 
     let images = document.createElement("div");
     images.className = "image-conatiner";
+    if (project.images.length == 0) {
+      let noImMessage = document.createElement("p");
+      noImMessage.innerHTML = "No Image <span>_</span>";
+      noImMessage.className = "no-image-message";
+      overlayImage.appendChild(noImMessage);
+    }
     project.images.forEach((i) => {
       let image = document.createElement("div");
       image.className += `image image${j}`;
@@ -75,6 +81,9 @@ const generateProjects = async () => {
     let rightArrow = document.createElement("div");
     rightArrow.className = "arrow";
     rightArrow.id = "right-arrow";
+    if (project.images.length < 2) {
+      rightArrow.style.display = "none";
+    }
     leftArrow.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"/></svg>`;
     rightArrow.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/></svg>`;
 
@@ -168,52 +177,6 @@ const generateProjects = async () => {
     projectsContainer.appendChild(newProject);
   });
 };
-
-// const rightArrow = document.getElementById("right-arrow");
-// const leftArrow = document.getElementById("left-arrow");
-// const images = document.getElementsByClassName("image");
-// leftArrow.style.display = "none";
-// // leftArrow.innerHTML =
-// //   '<svg width="64px" height="64px" viewBox="0 0 64 64" id="i-github" xmlns="http://www.w3.org/2000/svg" > <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" /> </svg>';
-
-// // leftArrow.innerHTML += "<button>a</button>";
-// let currentImage = 1;
-
-// rightArrow.addEventListener("click", (e) => {
-//   currentImage = currentImage + 1;
-//   if (currentImage == images.length) {
-//     rightArrow.style.display = "none";
-//   }
-//   if (currentImage > 1) {
-//     leftArrow.style.display = "flex";
-//   }
-//   // const index = Array.from(dots.children).indexOf(target);
-//   const selector = `.image:nth-child(${currentImage})`;
-//   const box = document.querySelector(selector);
-//   box.scrollIntoView({
-//     behavior: "smooth",
-//     inline: "start",
-//     block: "nearest",
-//   });
-// });
-
-// leftArrow.addEventListener("click", (e) => {
-//   currentImage = currentImage - 1;
-//   if (currentImage < 2) {
-//     leftArrow.style.display = "none";
-//   }
-//   if (currentImage < images.length) {
-//     rightArrow.style.display = "flex";
-//   }
-//   // const index = Array.from(dots.children).indexOf(target);
-//   const selector = `.image:nth-child(${currentImage})`;
-//   const box = document.querySelector(selector);
-//   box.scrollIntoView({
-//     behavior: "smooth",
-//     inline: "start",
-//     block: "nearest",
-//   });
-// });
 
 generateSkills();
 generateProjects();
