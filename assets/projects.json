@@ -71,16 +71,15 @@
     ]
   },
   {
-    "title": "Type Speed Test",
-    "description": "A typing speed test with random sentence generation, level progression and scoreboard",
+    "title": "Type Speed Test (PWA)",
+    "description": "A typing speed test Progressive Web App with level progression, random sentence generation and local leaderboar- built in Javascript",
     "images": [
       "typeSpeedTest1.png",
       "typeSpeedTest0.png",
       "typeSpeedTest2.png",
       "typeSpeedTest3.png",
       "typeSpeedTest4.png",
-      "typeSpeedTest5.png",
-      "typeSpeedTest6.png"
+      "typeSpeedTest5.png"
     ],
     "tags": ["Javascript", "SCSS"],
     "links": [
