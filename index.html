@@ -113,7 +113,12 @@
               </div>
             </div>
             <p
-              onclick="  navigator.clipboard.writeText('joshua.churchill10@gmail.com');"
+              onclick="  navigator.clipboard.writeText('joshua.churchill10@gmail.com');
+              const message = document.querySelector('#copyMessage');
+              message.textContent = 'Copied!'
+              setTimeout(function(){
+                  message.textContent = 'Copy'
+              }, 1000);"
             >
               joshua.churchill10@gmail.com
               <span class="tool-tip" id="copyMessage">Copy</span>
