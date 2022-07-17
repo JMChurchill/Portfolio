@@ -27,20 +27,46 @@ const generateSkills = async () => {
   );
   var langsContainer = document.getElementById("langs");
   var framesContainer = document.getElementById("frams");
+  var addContainer = document.getElementById("add");
+  var softContainer = document.getElementById("soft");
   skills.forEach((skill) => {
-    let newSkill = document.createElement("div");
-    newSkill.className = "skill-container";
-    let image = document.createElement("div");
-    image.className = "icon";
-    image.style.backgroundImage = `url('../assets/images/skill-icons/${skill.image}') `;
-    // image.style.backgroundRepeat = "no-repeat";
+    if (skill.type !== "additional" && skill.type !== "soft") {
+      let newSkill = document.createElement("div");
+      newSkill.className = "skill-container";
+      let image = document.createElement("div");
+      image.className = "icon";
+      image.style.backgroundImage = `url('../assets/images/skill-icons/${skill.image}') `;
+      // image.style.backgroundRepeat = "no-repeat";
 
-    newSkill.appendChild(image);
-    let text = document.createElement("p");
-    text.innerText = skill.name;
-    newSkill.appendChild(text);
-    if (skill.type === "language") langsContainer.appendChild(newSkill);
-    else framesContainer.appendChild(newSkill);
+      newSkill.appendChild(image);
+      let text = document.createElement("p");
+      text.innerText = skill.name;
+      newSkill.appendChild(text);
+      if (skill.type === "language") langsContainer.appendChild(newSkill);
+      else {
+        framesContainer.appendChild(newSkill);
+      }
+    } else {
+      let newSkill = document.createElement("p");
+      newSkill.className = "addi-skill";
+      newSkill.textContent = skill.name;
+      if (skill.type === "additional") addContainer.appendChild(newSkill);
+      else softContainer.appendChild(newSkill);
+
+      // newSkill.className = "skill-container";
+      // let image = document.createElement("div");
+      // image.className = "icon";
+      // image.style.backgroundImage = `url('../assets/images/skill-icons/${skill.image}') `;
+      // // image.style.backgroundRepeat = "no-repeat";
+      // newSkill.appendChild(image);
+      // let text = document.createElement("p");
+      // text.innerText = skill.name;
+      // newSkill.appendChild(text);
+      // if (skill.type === "language") langsContainer.appendChild(newSkill);
+      // else if (skill.type === "framework") {
+      //   framesContainer.appendChild(newSkill);
+      // } else addContainer.appendChild(newSkill);
+    }
   });
 };
 

@@ -3,7 +3,7 @@
   --background-color: #fff;
   --text-color: black;
   --btn-text-color: #fff;
-  --item-container: #fff;
+  --item-container: rgba(0, 0, 0, 0.05);
   --border-radius: 5px;
   --tag-background: rgba(0, 0, 0, 0.1);
   --highlight-text-color: white;
@@ -15,7 +15,7 @@
   --box-shadow-color: black;
 
   // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-size: 18;
+  font-size: 18px;
 }
 ::selection {
   background: var(--primary-color);
@@ -90,6 +90,7 @@ h3,
 p {
   color: var(--text-color);
 }
+
 button {
   background-color: var(--primary-color);
   border: none;
@@ -111,10 +112,24 @@ button {
 .btn2 {
   background-color: var(--background-color);
   color: var(--primary-color);
-  &:hover {
+  box-shadow: none;
+  position: relative;
+  &::after {
+    content: "";
     background-color: var(--primary-color);
-    color: var(--background-color);
-    box-shadow: none;
+    height: 0.1rem;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: var(--border-radius);
+    transition: all 250ms ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -233,17 +248,25 @@ body {
     }
     #about-container {
       > div {
-        border: 1px solid var(--primary-color);
+        // border: 1px solid var(--primary-color);
+        margin-top: 5%;
+        background-color: var(--item-container);
         padding: 1rem;
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y)
           var(--box-shadow-blur) var(--box-shadow-spread)
           var(--box-shadow-color);
+        .highlight {
+          color: var(--primary-color);
+        }
 
         // border-color: var(--primary-color);
       }
     }
     #skills-container {
+      // > p {
+      //   align-self: start;
+      // }
       .skills {
         display: grid;
         grid-template-columns: repeat(auto-fill, MINMAX(150px, 1fr));
@@ -254,9 +277,9 @@ body {
         background-color: var(--item-container);
         border-radius: var(--border-radius);
 
-        // box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y)
-        //   var(--box-shadow-blur) var(--box-shadow-spread)
-        //   var(--box-shadow-color);
+        box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+          var(--box-shadow-blur) var(--box-shadow-spread)
+          var(--box-shadow-color);
 
         .skill-container {
           background-color: var(--background-color);
@@ -279,7 +302,23 @@ body {
           }
           > p {
             margin-bottom: 0;
+            text-align: center;
           }
+        }
+      }
+      .addi-skills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // align-items: stretch;
+        justify-content: flex-start;
+
+        .addi-skill {
+          background-color: var(--background-color);
+          border-radius: var(--border-radius);
+          margin: 0.25rem;
+          padding: 0.25rem 1rem;
+          text-align: center;
         }
       }
     }
@@ -293,6 +332,9 @@ body {
         padding: 0.5rem;
         gap: 0.5rem;
         border-radius: var(--border-radius);
+        box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y)
+          var(--box-shadow-blur) var(--box-shadow-spread)
+          var(--box-shadow-color);
         .project-container {
           .image-overlay {
             position: relative;
@@ -389,10 +431,24 @@ body {
             flex-wrap: wrap;
             flex-direction: row;
             gap: 0.5rem;
+            // height: 3rem;
+            width: 100%;
             // padding: 0.5rem;
             margin-top: 0.75rem;
-            overflow: hidden;
+            // overflow: scroll;
             border-radius: var(--border-radius);
+            position: relative;
+            // &::after {
+            //   content: "All Tags";
+            //   position: sticky;
+            //   bottom: 0;
+            //   width: 100%;
+            //   height: 1rem;
+            //   background-color: blue;
+            //   align-items: center;
+            //   justify-content: center;
+            //   text-align: center;
+            // }
             // box-shadow: inset var(--box-shadow-offset-x)
             //   var(--box-shadow-offset-y) var(--box-shadow-blur)
             //   var(--box-shadow-spread) var(--box-shadow-color);
@@ -479,7 +535,7 @@ body {
           align-items: center;
           p,
           a {
-            color: white;
+            color: var(--text-color);
             font-size: 1.2rem;
             width: fit-content;
             cursor: pointer;

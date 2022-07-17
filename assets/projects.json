@@ -8,7 +8,19 @@
       "persalearn_3.jpg",
       "persalearn_4.png"
     ],
-    "tags": ["React JS", "React Native", "Node JS", "CSS"],
+    "tags": [
+      "React JS",
+      "React Native",
+      "Node JS",
+      "CSS",
+      "MySQL",
+      "API",
+      "JWT",
+      "Javascript",
+      "Full Stack",
+      "Cross Platform",
+      "Unit Testing"
+    ],
     "links": [
       {
         "name": "live",
@@ -24,11 +36,31 @@
     "title": "Full Stack Shopping Application",
     "description": "To provide a more efficient and personalised online marketplace environment for buyers and sellers through more specialised and relevant product recommendations, saving consumers time by anticipating their needs while streamlining the product discovery process and therefore increasing sales.",
     "images": ["shop_1.png", "shop_2.png", "shop_3.png"],
-    "tags": ["Xamarin", "ASP.NET", "API", "C#"],
+    "tags": [
+      "Xamarin",
+      "ASP.NET",
+      "API",
+      "C#",
+      "Unit Testing",
+      "Group Work",
+      "UML"
+    ],
     "links": [
       {
         "name": "code",
         "url": "https://github.com"
+      }
+    ]
+  },
+  {
+    "title": "Self Checkout and Stock Management System",
+    "description": "Software engineering, design patterns, coursework submittion",
+    "images": [],
+    "tags": ["Java", "Unit Testing", "Design Patterns"],
+    "links": [
+      {
+        "name": "code",
+        "url": "https://github.com/JMChurchill/Self-Checkout-and-Stock-managment-Application---COMP2000"
       }
     ]
   },
@@ -81,7 +113,7 @@
       "typeSpeedTest4.png",
       "typeSpeedTest5.png"
     ],
-    "tags": ["Javascript", "SCSS"],
+    "tags": ["Javascript", "SCSS", "PWA"],
     "links": [
       {
         "name": "live",
@@ -90,18 +122,6 @@
       {
         "name": "code",
         "url": "https://github.com/JMChurchill/Type-Speed-Test"
-      }
-    ]
-  },
-  {
-    "title": "Self Checkout and Stock Management System",
-    "description": "Software engineering, design patterns, coursework submittion",
-    "images": [],
-    "tags": ["Java", "Unit Testing", "Design Patterns"],
-    "links": [
-      {
-        "name": "code",
-        "url": "https://github.com/JMChurchill/Self-Checkout-and-Stock-managment-Application---COMP2000"
       }
     ]
   }

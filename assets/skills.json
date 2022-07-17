@@ -13,5 +13,27 @@
   { "name": "Xamarin", "image": "xamarin.png", "type": "framework" },
   { "name": "Docker", "image": "Moby-logo.webp", "type": "framework" },
   { "name": "JUnit", "image": "JUnit.png", "type": "framework" },
-  { "name": "Cypress", "image": "cypress.png", "type": "framework" }
+  { "name": "Cypress", "image": "cypress.png", "type": "framework" },
+  { "name": "Java", "image": "", "type": "additional" },
+  { "name": "C++", "image": "", "type": "additional" },
+  { "name": "Python", "image": "", "type": "additional" },
+  { "name": "PHP", "image": "", "type": "additional" },
+  { "name": "MATLAB", "image": "", "type": "additional" },
+  { "name": ".NET", "image": "", "type": "additional" },
+  { "name": "Linux", "image": "", "type": "additional" },
+  { "name": "Teamwork", "image": "", "type": "soft" },
+  { "name": "Leadership", "image": "", "type": "soft" },
+  { "name": "Time Management", "image": "", "type": "soft" },
+  { "name": "Motivation", "image": "", "type": "soft" },
+  { "name": "Adaptability", "image": "", "type": "soft" },
+  { "name": "Agile", "image": "", "type": "soft" },
+  {
+    "name": "Version Control",
+    "image": "versionControl.png",
+    "type": "framework"
+  },
+  { "name": "UML", "image": "UML.png", "type": "framework" },
+  { "name": "Trello", "image": "trello.png", "type": "framework" },
+  { "name": "Adobe XD", "image": "UML.png", "type": "additional" },
+  { "name": "Figma", "image": "UML.png", "type": "additional" }
 ]

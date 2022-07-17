@@ -3,7 +3,7 @@
   --background-color: #fff;
   --text-color: black;
   --btn-text-color: #fff;
-  --item-container: #fff;
+  --item-container: rgba(0, 0, 0, 0.05);
   --border-radius: 5px;
   --tag-background: rgba(0, 0, 0, 0.1);
   --highlight-text-color: white;
@@ -12,7 +12,7 @@
   --box-shadow-blur: 0.5rem;
   --box-shadow-spread: -0.25rem;
   --box-shadow-color: black;
-  font-size: 18;
+  font-size: 18px;
 }
 
 ::-moz-selection {
@@ -132,13 +132,26 @@ button:hover {
 .btn2 {
   background-color: var(--background-color);
   color: var(--primary-color);
-}
-
-.btn2:hover {
-  background-color: var(--primary-color);
-  color: var(--background-color);
   -webkit-box-shadow: none;
           box-shadow: none;
+  position: relative;
+}
+
+.btn2::after {
+  content: "";
+  background-color: var(--primary-color);
+  height: 0.1rem;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: var(--border-radius);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn2:hover::after {
+  width: 100%;
 }
 
 body {
@@ -296,11 +309,16 @@ body main #welcome-container .cursor {
 }
 
 body main #about-container > div {
-  border: 1px solid var(--primary-color);
+  margin-top: 5%;
+  background-color: var(--item-container);
   padding: 1rem;
   border-radius: var(--border-radius);
   -webkit-box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
           box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+body main #about-container > div .highlight {
+  color: var(--primary-color);
 }
 
 body main #skills-container .skills {
@@ -316,6 +334,8 @@ body main #skills-container .skills {
           justify-content: space-between;
   background-color: var(--item-container);
   border-radius: var(--border-radius);
+  -webkit-box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
 }
 
 body main #skills-container .skills .skill-container {
@@ -351,6 +371,30 @@ body main #skills-container .skills .skill-container .icon {
 
 body main #skills-container .skills .skill-container > p {
   margin-bottom: 0;
+  text-align: center;
+}
+
+body main #skills-container .addi-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main #skills-container .addi-skills .addi-skill {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  margin: 0.25rem;
+  padding: 0.25rem 1rem;
+  text-align: center;
 }
 
 body main #projects-container {
@@ -367,6 +411,8 @@ body main #projects-container .projects {
   padding: 0.5rem;
   gap: 0.5rem;
   border-radius: var(--border-radius);
+  -webkit-box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+          box-shadow: inset var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
 }
 
 body main #projects-container .projects .project-container {
@@ -494,9 +540,10 @@ body main #projects-container .projects .project-container .tag_container {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.5rem;
+  width: 100%;
   margin-top: 0.75rem;
-  overflow: hidden;
   border-radius: var(--border-radius);
+  position: relative;
 }
 
 body main #projects-container .projects .project-container .tag_container .tag {
@@ -606,7 +653,7 @@ body main #contact-container > .btns .contact {
 
 body main #contact-container > .btns .contact p,
 body main #contact-container > .btns .contact a {
-  color: white;
+  color: var(--text-color);
   font-size: 1.2rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
