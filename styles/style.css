@@ -397,6 +397,11 @@ body main #skills-container .addi-skills .addi-skill {
   text-align: center;
 }
 
+body main #experience-container .date {
+  color: lightgray;
+  font-size: 1rem;
+}
+
 body main #projects-container {
   width: 100%;
 }

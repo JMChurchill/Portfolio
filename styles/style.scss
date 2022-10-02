@@ -322,6 +322,12 @@ body {
         }
       }
     }
+    #experience-container {
+      .date {
+        color: lightgray;
+        font-size: 1rem;
+      }
+    }
     #projects-container {
       width: 100%;
       .projects {
